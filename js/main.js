@@ -25,22 +25,13 @@ function handleDragOver(e) {
     console.log("dragged over me");
 }
 
-
-
-
-
-
-
 function handleDrop(e) {
     e.preventDefault();
     console.log("dropped something on me");
    //this line moves the dragged piece from the left side of the board
     //into whatever dropzone we choose.
 
-
-
-  
-    // This line of code checks if the drop zone already contains a puzzle piece
+// This line of code checks if the drop zone already contains a puzzle piece
 
     if (this.children.length > 0) {               //This condition checks if the drop zone already contains any child elements
       console.log("Drop zone already contains a puzzle piece");    //if the drop zone already contains any piece  this line logs the given message to console
@@ -54,19 +45,23 @@ function handleDrop(e) {
   //The adove line of code had errors and was responsible for puzzle pieces stacing on top of each other
 
 
+function resetPuzzleBoard() {
+    // Move puzzle pieces back to the puzzle-pieces div
+    puzzlePieces.forEach(piece => {
+        piece.style.left = '0';
+        piece.style.top = '0';
+        document.querySelector('.puzzle-pieces').appendChild(piece);
+    });
 
+    // print message to console
+    console.log("Reset button clicked, puzzle reset");
+}
 
+// Retrieve the reset button element
+const resetButton = document.getElementById("resetBut");
 
-
-
-
-
-
-
-
-
-
-
+// Attach the extended functionality to the reset button click event
+resetButton.addEventListener("click", resetPuzzleBoard);
 
 //event Listeners
 theButtons.forEach(button => button.addEventListener("click", changeBGImage)); 
