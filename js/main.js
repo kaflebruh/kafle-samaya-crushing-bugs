@@ -46,9 +46,10 @@ function handleDrop(e) {
 
 
 function resetPuzzleBoard() {
-    // Move puzzle pieces back to the puzzle-pieces div
+    // Move puzzle pieces back to their own section
     puzzlePieces.forEach(piece => {
-        piece.style.left = '0';
+      //we could even use "if" here, "if" used we need to make more changes.
+        piece.style.left = '0';   // here it setls the position of the puzzle piece
         piece.style.top = '0';
         document.querySelector('.puzzle-pieces').appendChild(piece);
     });
