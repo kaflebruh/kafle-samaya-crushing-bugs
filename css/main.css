@@ -124,7 +124,7 @@ footer {
 	border-radius: 20px;
 	border: thin solid #333;
 	cursor: pointer;
-	box-shadow: 0 2px 4px rgba(255, 255, 255, 0.724);
+	box-shadow: 0 2px 4px rgba(255, 255, 255, 0.576);
         transition: all 0.3s ease;
 }
 
