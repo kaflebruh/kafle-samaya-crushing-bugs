@@ -57,6 +57,16 @@ function handleDrop(e) {
 
 
 
+//FOR RESET BUTTON
+  function resetPuzzleBoard() {
+    // Move puzzle pieces back to the puzzle-pieces div
+    puzzlePieces.forEach(piece => {
+        piece.style.left = '0';
+        piece.style.top = '0';
+        piece.style.transform = 'none';
+        document.querySelector('.puzzle-pieces').appendChild(piece);
+    });
+}
 
 
 
@@ -69,3 +79,11 @@ puzzlePieces.forEach(piece => piece.addEventListener("dragstart", handleStartDra
 dropZones.forEach(zone => zone.addEventListener("dragover", handleDragOver));
 
 dropZones.forEach(zone => zone.addEventListener("drop", handleDrop));
+
+
+
+
+//for reset button
+
+const resetButton = document.getElementById("resetBut");
+resetButton.addEventListener("click", resetPuzzleBoard);
