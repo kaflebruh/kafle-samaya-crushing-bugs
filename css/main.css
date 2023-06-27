@@ -20,6 +20,10 @@ body {
 	font-size:16px;
 }
 
+.hidden {
+	display: none;
+  }
+
 #game-boards {
 	text-align: center;
 	display: flex;
@@ -120,8 +124,30 @@ footer {
 	border-radius: 20px;
 	border: thin solid #333;
 	cursor: pointer;
+	box-shadow: 0 2px 4px rgba(255, 255, 255, 0.576);
+        transition: all 0.3s ease;
 }
 
 #buttonHolder img:hover {
-	opacity:.5;
+  transform: scale(1.05);
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+        opacity: 0.5;
+}
+
+#resetBut {
+	display: block;
+	margin: 0 auto;
+	text-align: center;
+	padding: 10px 20px;
+	background-color: #eaeaea;
+	color: #333;
+	font-size: 16px;
+	border: none;
+	border-radius: 8px;
+	cursor: pointer;
+}
+
+#resetBut:hover {
+	background-color: #ddd;
+	color: #e00e0e;
 }

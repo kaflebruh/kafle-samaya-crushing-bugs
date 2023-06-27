@@ -42,12 +42,12 @@ function handleDrop(e) {
   
     // This line of code checks if the drop zone already contains a puzzle piece
 
-    if (this.children.length > 0) {
-      console.log("Drop zone already contains a puzzle piece");
+    if (this.children.length > 0) {               //This condition checks if the drop zone already contains any child elements
+      console.log("Drop zone already contains a puzzle piece");    //if the drop zone already contains any piece  this line logs the given message to console
       return; // Drop rejected
     }
   
-    // Moves the dragged piece to the drop area
+    // Moves the dragged piece to the drop area if the drop area is empty
     this.appendChild(draggedPiece);
   }
   
@@ -57,16 +57,13 @@ function handleDrop(e) {
 
 
 
-//FOR RESET BUTTON
-  function resetPuzzleBoard() {
-    // Move puzzle pieces back to the puzzle-pieces div
-    puzzlePieces.forEach(piece => {
-        piece.style.left = '0';
-        piece.style.top = '0';
-        piece.style.transform = 'none';
-        document.querySelector('.puzzle-pieces').appendChild(piece);
-    });
-}
+
+
+
+
+
+
+
 
 
 
@@ -81,9 +78,3 @@ dropZones.forEach(zone => zone.addEventListener("dragover", handleDragOver));
 dropZones.forEach(zone => zone.addEventListener("drop", handleDrop));
 
 
-
-
-//for reset button
-
-const resetButton = document.getElementById("resetBut");
-resetButton.addEventListener("click", resetPuzzleBoard);

@@ -7,7 +7,6 @@
 	<link href="css/main.css" rel="stylesheet" type="text/css">
 </head>
 <body>
-	<button id="resetBut">Reset</button>
 	<!--resets the puzzle board-->
 
 	<header id="headLine">
@@ -16,6 +15,7 @@
 	</header>
 
 	<section id="game-boards">
+		<h2 class="hidden">Here will be all the draggable pieces</h2>
 		<!-- these are the draggable pieces -->
 		<div class="puzzle-pieces">
 			<img src="images/topLeft0.jpg" class="puzzle-image" alt="top left">
@@ -32,8 +32,12 @@
 		</div>
 	</section>
 	
+	<button id="resetBut">Reset</button>
+<br>
+
+
 	<footer>
-		<p>Click Thumb to change pieces</p>
+		<p>Click to change pieces</p>
 		<nav id="buttonHolder">
 			<img id="0" src="images/buttonZero.jpg" alt="puzzle background forest">
 			<img id="1" src="images/buttonOne.jpg" alt="puzzle background winter">
