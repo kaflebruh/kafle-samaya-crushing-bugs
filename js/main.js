@@ -51,7 +51,7 @@ function handleDrop(e) {
     this.appendChild(draggedPiece);
   }
   
-
+  //The adove line of code had errors and was responsible for puzzle pieces stacing on top of each other
 
 
 
